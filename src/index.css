@@ -1,0 +1,91 @@
+:root {
+  --primary: #2563eb;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --border: #e2e8f0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#root { width: 100%; max-width: 1200px; padding: 20px; }
+
+/* Utilities */
+.btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { opacity: 0.9; }
+.btn-outline { background: transparent; border: 1px solid var(--border); }
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Fixes padding issues */
+}
+
+/* Auth Page */
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  text-align: center;
+}
+
+/* Dashboard */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.issue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.issue-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.priority-High { background: #fee2e2; color: #991b1b; }
+.priority-Medium { background: #ffedd5; color: #9a3412; }
+.priority-Low { background: #dcfce7; color: #166534; }
+
+.status-Open { background: #e0f2fe; color: #075985; }
+.status-InProgress { background: #f3e8ff; color: #6b21a8; }
+.status-Done { background: #f1f5f9; color: #475569; text-decoration: line-through; }
